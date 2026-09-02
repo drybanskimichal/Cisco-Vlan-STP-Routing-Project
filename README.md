@@ -6,7 +6,7 @@ Rapid Spanning Tree Protocol, router-on-a-stick, VLSM subnetting).
 
 ## Topology
 
-<img width="1073" height="540" alt="image" src="https://github.com/user-attachments/assets/8063e6bc-c8c1-408f-9796-f8c9b4132a0b" />
+![Topologia](topology.png)
 
 - 2x core switches (redundantly connected to each other and to every access switch)
 - 3x access switches — one per department (Sales, IT, Finance)
