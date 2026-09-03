@@ -26,8 +26,8 @@ Rapid Spanning Tree Protocol, router-on-a-stick, VLSM subnetting).
 
 - [x] Phase 1: Physical topology
 - [x] Phase 2: Device hardening (passwords, banner, service password-encryption)
-- [ ] Phase 3: VLANs and access port assignment
-- [ ] Phase 4: Trunking
+- [x] Phase 3: VLANs and access port assignment
+- [x] Phase 4: Trunking
 - [ ] Phase 5: STP/RSTP (root bridge selection)
 - [ ] Phase 6: Management (SVI)
 - [ ] Phase 7: Inter-VLAN routing
