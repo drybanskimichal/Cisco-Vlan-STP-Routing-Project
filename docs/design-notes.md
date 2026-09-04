@@ -38,3 +38,6 @@ Verified with 'show spanning-tree': SW-CORE1 shows as root, and redundant links 
 access switches show a port in Blocking state as expected.
 ![SW-CORE1 as root bridge](screenshots/SW-Core1-RSTP.png)
 ![SW-CORE2 as secondary root](screenshots/SW2-Core-RSTP.png)
+![SW-ACC1 RSTP](screenshots/SW-ACC1-RSTP.png)
+![SW-ACC2 RSTP](screenshots/SW-ACC2-RSTP.png)
+![SW-ACC3 RSTP](screenshots/SW-ACC3-RSTP.png)
