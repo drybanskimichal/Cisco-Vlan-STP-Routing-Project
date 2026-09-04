@@ -5,10 +5,11 @@ Two core switches provide redundant uplinks to all three access switches, and th
 router connects only to SW-CORE1. This creates intentional Layer 2 loops so that
 Rapid Spanning Tree Protocol has something to resolve.
 
-## Router Uplink (Phase 1)
+## Router Uplink (Phase 2)
 R1 connects only to SW-CORE1. A second physical link to SW-CORE2 was considered for
 full router redundancy, but that requires a first-hop redundancy protocol (HSRP/VRRP),
 which is outside current course scope. Planned as a future improvement.
+![SW-ACC3 with RSTP Topology](screenshots/topology-rstp.png)
 
 ## VLAN & Subnetting (Phase 3)
 Used VLSM to size subnets according to expected department needs — Sales gets the
@@ -16,6 +17,9 @@ largest block (/26), IT and Finance get /27 each, and a small /28 is reserved fo
 switch management (VLAN 99).
 ![SW-CORE1 with vlan configuration](screenshots/SW-Core1-Vlan-Brief.png)
 ![SW-CORE2 with vlan configuration](screenshots/SW2-Core-Vlan-Brief.png)
+![SW-ACC1 with vlan configuration](screenshots/SW-ACC1-Vlan-Brief.png)
+![SW-ACC2 with vlan configuration](screenshots/SW-ACC2-Vlan-Brief.png)
+![SW-ACC3 with vlan configuration](screenshots/SW-ACC3-Vlan-Brief.png)
 
 ## Trunking (Phase 4)
 Trunk ports carry only the VLANs actually needed on each link — for example, the
