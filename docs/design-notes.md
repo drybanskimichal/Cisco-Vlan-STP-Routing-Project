@@ -14,12 +14,16 @@ which is outside current course scope. Planned as a future improvement.
 Used VLSM to size subnets according to expected department needs — Sales gets the
 largest block (/26), IT and Finance get /27 each, and a small /28 is reserved for
 switch management (VLAN 99).
+![SW-CORE1 with vlan configuration](screenshots/SW-Core1-Vlan-Brief.png)
+![SW-CORE2 with vlan configuration](screenshots/SW2-Core-Vlan-Brief.png)
 
 ## Trunking (Phase 4)
 Trunk ports carry only the VLANs actually needed on each link — for example, the
 trunk to SW-ACC3 only allows VLANs 30 and 99, since Finance PCs don't need to see
 Sales or IT broadcast traffic. Core-to-core and core-to-router trunks allow all VLANs,
 since the router needs Layer 3 reachability to every VLAN.
+![SW-CORE1 as trunk interface](screenshots/SW-Core1-Interface-Trunk.png)
+![SW-CORE2 as trunk interface](screenshots/SW2-Core-Interface-Trunk.png)
 
 ## STP/RSTP Root Bridge (Phase 5)
 SW-CORE1 was set as the primary root bridge (priority 4096) for all VLANs, since it's
@@ -28,3 +32,5 @@ uplink through the root minimizes suboptimal forwarding paths. SW-CORE2 was set 
 secondary root (priority 8192) to take over automatically if SW-CORE1 fails.
 Verified with 'show spanning-tree': SW-CORE1 shows as root, and redundant links on
 access switches show a port in Blocking state as expected.
+![SW-CORE1 as root bridge](screenshots/SW-Core1-RSTP.png)
+![SW-CORE2 as secondary root](screenshots/SW2-Core-RSTP.png)
